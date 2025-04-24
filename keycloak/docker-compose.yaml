@@ -15,6 +15,7 @@ services:
       - KEYCLOAK_FRAME_SRC=https://keycloak-provider.onrender.com
       - KC_HOSTNAME=https://keycloak-provider.onrender.com
       - KC_HOSTNAME_STRICT_HTTPS=true
+      - KEYCLOAK_PROXY=edge
       - KEYCLOAK_PROXY_ADDRESS_FORWARDING=true
       - KEYCLOAK_FRONTEND_URL=https://keycloak-provider.onrender.com/auth
       - KC_FRAME_OPTIONS=SAMEORIGIN
