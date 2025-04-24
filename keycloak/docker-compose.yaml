@@ -17,6 +17,8 @@ services:
       - KC_HOSTNAME_STRICT_HTTPS=true
       - KEYCLOAK_PROXY_ADDRESS_FORWARDING=true
       - KEYCLOAK_FRONTEND_URL=https://keycloak-provider.onrender.com/auth
+      - KC_FRAME_OPTIONS=SAMEORIGIN
+      - KC_CONTENT_SECURITY_POLICY=frame-src 'self' ${FRONTEND_URL}; frame-ancestors 'self' ${FRONTEND_URL};
     volumes:
       - keycloak_data:/opt/keycloak/data
 volumes:
