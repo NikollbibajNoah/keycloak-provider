@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:21.0.1
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_VENDOR=postgres
+      - DB_ADDR=dpg-d00evkadbo4c7390i990-a.frankfurt-postgres.render.com
+      - DB_PORT=5432
+      - DB_USER=nocan
+      - DB_PASSWORD=vfxBspx0i5Lgta8AfeIKfiErDHy8PMjW
+      - DB_DATABASE=filmverleih
+      - DB_SCHEMA=keycloak
+    volumes:
+      - keycloak_data:/opt/keycloak/data
+volumes:
+  keycloak_data:
