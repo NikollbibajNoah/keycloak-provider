@@ -3,6 +3,8 @@ ENV KEYCLOAK_ADMIN=admin
 ENV KEYCLOAK_ADMIN_PASSWORD=admin
 RUN /opt/keycloak/bin/kc.sh build
 
+ENV FRONTEND_URL=${FRONTEND_URL}
+
 EXPOSE 8080
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start-dev"]
