@@ -12,6 +12,7 @@ services:
       - DB_PASSWORD=vfxBspx0i5Lgta8AfeIKfiErDHy8PMjW
       - DB_DATABASE=filmverleih
       - DB_SCHEMA=keycloak
+      - KEYCLOAK_FRAME_SRC=http://keycloak-provider.onrender.com
     volumes:
       - keycloak_data:/opt/keycloak/data
 volumes:
